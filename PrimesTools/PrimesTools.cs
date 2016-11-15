@@ -5,7 +5,8 @@ namespace PrimesTools
 {
     public class PrimesTools : IPrimesTools
     {
-        string _usage = "usage: PrimesTools.exe n\r\nn is a number limited to this range[1," + (long.MaxValue - 1) + "]\r\n";
+        const int NumberOfPrimeLimit = 10000;
+        string _usage = "usage: PrimesTools.exe n\r\nn is a number limited to this range[1," + NumberOfPrimeLimit + "]\r\n";
 
         IPrimeAlgo _primeAglo;
         IMatrixFormater<long?> _matrixFormater;
@@ -63,7 +64,7 @@ namespace PrimesTools
                 }
                 else
                 {
-                    if (numberOfPrime >= 1)
+                    if (numberOfPrime >= 1 && numberOfPrime <= NumberOfPrimeLimit)
                     {
                         argumentsAreValid = true;
                     }

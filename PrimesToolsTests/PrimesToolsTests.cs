@@ -70,5 +70,19 @@ namespace PrimesTools.Tests
                 Assert.AreEqual(formatExpect, result);
             }
         }
+
+        [TestMethod()]
+        public void ExecuteWithBigNumberOverTheLimitPrintUsageTest()
+        {
+            using (StringWriter sw = new StringWriter())
+            {
+                var primesTools = PrimeToolsFactory.CreatePrimesTools(sw);
+                string[] args = new[] { "100001" };
+                primesTools.Execute(args);
+                var formatExpect = primesTools.Usage;
+                var result = sw.ToString();
+                Assert.AreEqual(formatExpect, result);
+            }
+        }
     }
 }
