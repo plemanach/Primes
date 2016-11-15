@@ -10,7 +10,33 @@ namespace PrimesTools
     {
         public bool TryValidateArguments(string[] args, out long numberOfPrime)
         {
-            throw new NotImplementedException();
+            bool argumentsAreValid = false;
+            numberOfPrime = 1;
+
+            if (args.Length != 1)
+            {
+                argumentsAreValid = false;
+            }
+            else
+            {
+                bool numberOfPrimeParsed = long.TryParse(args[0], out numberOfPrime);
+                if (!numberOfPrimeParsed)
+                {
+                    argumentsAreValid = false;
+                }
+                else
+                {
+                    if (numberOfPrime >= 1)
+                    {
+                        argumentsAreValid = true;
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+            return argumentsAreValid;
         }
     }
 }
