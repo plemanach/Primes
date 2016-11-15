@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Primes
 {
-    public class MatrixFormater<T>
+    public class MatrixFormater<T> : IMatrixFormater<T>
     {
         TextWriter _textWriter;
         public MatrixFormater(TextWriter textWriter)
