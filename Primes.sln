@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primes", "Primes\Primes.csproj", "{31532AC8-9437-469C-A700-21F5033ADECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimesTests", "PrimesTests\PrimesTests.csproj", "{9DFAB972-BB28-41E5-9141-B71E364435F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31532AC8-9437-469C-A700-21F5033ADECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31532AC8-9437-469C-A700-21F5033ADECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31532AC8-9437-469C-A700-21F5033ADECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31532AC8-9437-469C-A700-21F5033ADECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFAB972-BB28-41E5-9141-B71E364435F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFAB972-BB28-41E5-9141-B71E364435F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFAB972-BB28-41E5-9141-B71E364435F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFAB972-BB28-41E5-9141-B71E364435F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
