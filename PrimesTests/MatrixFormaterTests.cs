@@ -32,5 +32,22 @@ namespace Primes.Tests
                 Assert.AreEqual(formatExpect, formatResult);
             }
         }
+
+        [TestMethod()]
+        public void FormatOneElementTest()
+        {
+            using (StringWriter sw = new StringWriter())
+            {
+                MatrixFormater<long?> matrixFormater = new MatrixFormater<long?>(sw);
+                var matrix = new long?[1, 1] { { 1 } };
+                matrixFormater.Format(matrix);
+
+                var formatExpect = @"|  1|
+";
+                sw.Flush();
+                var formatResult = sw.ToString();
+                Assert.AreEqual(formatExpect, formatResult);
+            }
+        }
     }
 }
