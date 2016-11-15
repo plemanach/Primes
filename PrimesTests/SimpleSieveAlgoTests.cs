@@ -60,5 +60,15 @@ namespace Primes.Tests
             var primeResult = primesAlgo.FindPrimes(100000).Last();
             Assert.AreEqual(expectedPrime, primeResult);
         }
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod()]
+        public void FindPrimesWith1BillionPrimesTest()
+        {
+            var primesAlgo = new SimpleSieveAlgo();
+            var expectedPrime = 22801763489;
+            var primeResult = primesAlgo.FindPrimes(1000000000).Last();
+            Assert.AreEqual(expectedPrime, primeResult);
+        }
     }
 }
