@@ -10,6 +10,8 @@ namespace PrimesTools
     {
         static void Main(string[] args)
         {
+            var primesTools = PrimeToolsFactory.CreatePrimesTools(Console.Out);
+            primesTools.Execute(args);
         }
     }
 }
