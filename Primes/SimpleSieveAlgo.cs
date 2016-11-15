@@ -17,7 +17,36 @@ namespace Primes
         /// <returns>The Nth prime numbers</returns>
         public IEnumerable<long> FindPrimes(long numberOfPrime)
         {
-            return FindPrimesLimit(limitMax).Take((int)numberOfPrime);
+            return FindPrimesLimit(ApproximateNthPrimeLimit((int)numberOfPrime)).Take((int)numberOfPrime);
+        }
+
+        private int ApproximateNthPrimeLimit(int numberOfPrime)
+        {
+            double n = Convert.ToDouble(numberOfPrime);
+            double p;
+            if (numberOfPrime >= 7022)
+            {
+                p = n * Math.Log(n) + n * (Math.Log(Math.Log(n)) - 0.9385);
+            }
+            else if (numberOfPrime >= 6)
+            {
+                p = n * Math.Log(n) + n * Math.Log(Math.Log(n));
+            }
+            else if (numberOfPrime > 0)
+            {
+                p = new int[] { 2, 3, 5, 7, 11 }[numberOfPrime - 1];
+            }
+            else
+            {
+                p = 0;
+            }
+
+            if (p > limitMax)
+            {
+                throw new ArgumentException(nameof(numberOfPrime) + " has overpass its limit.");
+            }
+
+            return (int)p;
         }
 
         /// <summary>

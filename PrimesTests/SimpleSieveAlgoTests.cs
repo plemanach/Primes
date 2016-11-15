@@ -42,5 +42,23 @@ namespace Primes.Tests
             var primesResult = primesAlgo.FindPrimes(4).ToArray();
             CollectionAssert.AreEqual(expectedPrimes, primesResult);
         }
+
+        [TestMethod()]
+        public void FindPrimesWith6PrimesTest()
+        {
+            var primesAlgo = new SimpleSieveAlgo();
+            var expectedPrimes = new long[] { 2, 3, 5, 7, 11, 13 };
+            var primesResult = primesAlgo.FindPrimes(6).ToArray();
+            CollectionAssert.AreEqual(expectedPrimes, primesResult);
+        }
+
+        [TestMethod()]
+        public void FindPrimesWith100KPrimesTest()
+        {
+            var primesAlgo = new SimpleSieveAlgo();
+            var expectedPrime = 1299709;
+            var primeResult = primesAlgo.FindPrimes(100000).Last();
+            Assert.AreEqual(expectedPrime, primeResult);
+        }
     }
 }
