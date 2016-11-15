@@ -4,24 +4,19 @@ using System.Collections.Generic;
 
 namespace Primes
 {
-    public class SegmentedSieveAlgo : BaseSieveAlgo, ISieveAlgo
+    public class SegmentedSieveAlgo : BaseSieveAlgo
     {
         const int l1dCacheSize = 32768;
         const long limitMax = (long)(int.MaxValue - 1) * (long)(int.MaxValue - 1);
 
-        public IEnumerable<long> FindPrimes(long numberOfPrime)
+        public override IEnumerable<long> FindPrimes(long numberOfPrime)
         {
             return FindPrimesLimit(ApproximateNthPrimeLimit(numberOfPrime, limitMax), numberOfPrime);
         }
 
-        public IEnumerable<long> FindPrimesLimit(long limit)
+        public override IEnumerable<long> FindPrimesLimit(long limit)
         {
             return FindPrimesLimit(limit, limitMax);
-        }
-
-        public long?[,] GetPrimesMultiplicationTable(long numberOfPrime)
-        {
-            throw new NotImplementedException();
         }
 
         private IEnumerable<long> FindPrimesLimit(long limit, long numberOfPrime = limitMax)

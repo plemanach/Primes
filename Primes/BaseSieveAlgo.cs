@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Primes
 {
-    public class BaseSieveAlgo
+    public abstract class BaseSieveAlgo : ISieveAlgo
     {
+        public abstract IEnumerable<long> FindPrimes(long numberOfPrime);
+
+        public abstract IEnumerable<long> FindPrimesLimit(long limit);
+
         protected virtual long ApproximateNthPrimeLimit(long numberOfPrime, long limitMax)
         {
             double n = Convert.ToDouble(numberOfPrime);
@@ -39,7 +43,27 @@ namespace Primes
 
         public long?[,] GetPrimesMultiplicationTable(long numberOfPrime)
         {
-            throw new NotImplementedException();
+            long tableSise = numberOfPrime + 1;
+
+            var multiplication = new long?[tableSise, tableSise];
+
+            int index = 1;
+            foreach (long prime in FindPrimes(numberOfPrime))
+            {
+                multiplication[0, index] = prime;
+                multiplication[index, 0] = prime;
+                index++;
+            }
+
+            for (int column = 1; column < tableSise; column++)
+            {
+                for (int row = 1; row < tableSise; row++)
+                {
+                    multiplication[row, column] = multiplication[0, column] * multiplication[row, 0];
+                }
+            }
+
+            return multiplication;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Primes
     /// This class implement the algo Sieve of Eratosthenes
     /// https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
     /// </summary>
-    public class SimpleSieveAlgo : BaseSieveAlgo, ISieveAlgo
+    public class SimpleSieveAlgo : BaseSieveAlgo
     {
         const int limitMax = (int.MaxValue - 1);
 
@@ -19,7 +19,7 @@ namespace Primes
         /// </summary>
         /// <param name="numberOfPrime">Number of primes</param>
         /// <returns>The Nth prime numbers</returns>
-        public IEnumerable<long> FindPrimes(long numberOfPrime)
+        public override IEnumerable<long> FindPrimes(long numberOfPrime)
         {
             return FindPrimesLimit(ApproximateNthPrimeLimit(numberOfPrime, limitMax)).Take((int)numberOfPrime);
         }
@@ -29,7 +29,7 @@ namespace Primes
         /// </summary>
         /// <param name="limit">Limit</param>
         /// <returns>The prime numbers below the limit</returns>
-        public IEnumerable<long> FindPrimesLimit(long limit)
+        public override IEnumerable<long> FindPrimesLimit(long limit)
         {
             if (limit > limitMax)
             {
@@ -45,11 +45,6 @@ namespace Primes
                 if (primes[i])
                     yield return i;
             }
-        }
-
-        public long?[,] GetPrimesMultiplicationTable(long numberOfPrime)
-        {
-            throw new NotImplementedException();
         }
 
         protected void Sieve(BitArray primes, int start, int limit)
