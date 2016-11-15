@@ -9,7 +9,7 @@ namespace Primes
     /// This class implement the algo Sieve of Eratosthenes
     /// https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
     /// </summary>
-    public class SimpleSieveAlgo : BaseSieveAlgo
+    public class SimpleSieveAlgo : BaseSieveAlgo, ISieveAlgo
     {
         const int limitMax = (int.MaxValue - 1);
 

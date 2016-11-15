@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Primes
 {
-    public class SegmentedSieveAlgo : BaseSieveAlgo
+    public class SegmentedSieveAlgo : BaseSieveAlgo, ISieveAlgo
     {
         const int l1dCacheSize = 32768;
         const long limitMax = (long)(int.MaxValue - 1) * (long)(int.MaxValue - 1);
@@ -14,7 +14,12 @@ namespace Primes
             return FindPrimesLimit(ApproximateNthPrimeLimit(numberOfPrime, limitMax), numberOfPrime);
         }
 
-        public IEnumerable<long> FindPrimesLimit(long limit, long numberOfPrime = limitMax)
+        public IEnumerable<long> FindPrimesLimit(long limit)
+        {
+            return FindPrimesLimit(limit, limitMax);
+        }
+
+        private IEnumerable<long> FindPrimesLimit(long limit, long numberOfPrime = limitMax)
         {
             long sqrt = (long)Math.Sqrt(limit);
 
