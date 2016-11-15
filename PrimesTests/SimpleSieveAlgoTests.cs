@@ -39,7 +39,7 @@ namespace Primes.Tests
         {
             var primesAlgo = new SimpleSieveAlgo();
             var expectedPrimes = new long[] { 2, 3, 5, 7 };
-            var primesResult = primesAlgo.FindPrimesLimit(4).ToArray();
+            var primesResult = primesAlgo.FindPrimes(4).ToArray();
             CollectionAssert.AreEqual(expectedPrimes, primesResult);
         }
     }
