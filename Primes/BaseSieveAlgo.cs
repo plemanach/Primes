@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Primes
 {
-    public abstract class BaseSieveAlgo : ISieveAlgo
+    public abstract class BaseSieveAlgo : IPrimeAlgo
     {
         public abstract IEnumerable<long> FindPrimes(long numberOfPrime);
 

@@ -2,7 +2,7 @@
 
 namespace Primes
 {
-    public interface ISieveAlgo
+    public interface IPrimeAlgo
     {
         IEnumerable<long> FindPrimes(long numberOfPrime);
         IEnumerable<long> FindPrimesLimit(long limit);
