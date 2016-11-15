@@ -4,17 +4,17 @@ using System.Collections.Generic;
 
 namespace Primes
 {
-    public class SegmentedSieveAlgo
+    public class SegmentedSieveAlgo : BaseSieveAlgo
     {
         const int l1dCacheSize = 32768;
         const long limitMax = (long)(int.MaxValue - 1) * (long)(int.MaxValue - 1);
 
         public IEnumerable<long> FindPrimes(long numberOfPrime)
         {
-            throw new NotImplementedException();
+            return FindPrimesLimit(ApproximateNthPrimeLimit(numberOfPrime, limitMax), numberOfPrime);
         }
 
-        public IEnumerable<long> FindPrimesLimit(int limit)
+        public IEnumerable<long> FindPrimesLimit(long limit, long numberOfPrime = limitMax)
         {
             long sqrt = (long)Math.Sqrt(limit);
 
@@ -81,6 +81,9 @@ namespace Primes
                     if (sieve[(int)(n - low)]) // n is a prime
                     {
                         yield return n;
+                        count++;
+                        if (count == numberOfPrime)
+                            yield break;
                     }
                 }
             }
