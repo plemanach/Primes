@@ -19,5 +19,14 @@ namespace Primes.Tests
             var primesResult = primesAlgo.FindPrimesLimit(10).ToArray();
             CollectionAssert.AreEqual(expectedPrimes, primesResult);
         }
+
+        [TestMethod()]
+        public void FindPrimesTest()
+        {
+            var primesAlgo = new SegmentedSieveAlgo();
+            var expectedPrimes = new long[] { 2, 3, 5, 7 };
+            var primesResult = primesAlgo.FindPrimes(4).ToArray();
+            CollectionAssert.AreEqual(expectedPrimes, primesResult);
+        }
     }
 }

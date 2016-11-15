@@ -9,6 +9,11 @@ namespace Primes
         const int l1dCacheSize = 32768;
         const long limitMax = (long)(int.MaxValue - 1) * (long)(int.MaxValue - 1);
 
+        public IEnumerable<long> FindPrimes(long numberOfPrime)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<long> FindPrimesLimit(int limit)
         {
             long sqrt = (long)Math.Sqrt(limit);
