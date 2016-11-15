@@ -24,5 +24,15 @@ namespace Primes.Tests
             var primesAlgo = new SimpleSieveAlgo();
             var primesResult = primesAlgo.FindPrimesLimit(int.MaxValue).ToArray();
         }
+
+        [TestMethod()]
+        public void FindPrimesLimitHandleMaxNumberWellTest()
+        {
+            var primesAlgo = new SimpleSieveAlgo();
+            var primesResult = primesAlgo.FindPrimesLimit(int.MaxValue-1).Last();
+            var primeExpected = 2147483629;
+            Assert.AreEqual(primeExpected, primesResult);
+        }
+
     }
 }
