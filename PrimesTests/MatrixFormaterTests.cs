@@ -17,7 +17,7 @@ namespace Primes.Tests
         {
             using (StringWriter sw = new StringWriter())
             {
-                MatrixFormater<long?> matrixFormater = new MatrixFormater<long?>();
+                MatrixFormater<long?> matrixFormater = new MatrixFormater<long?>(sw);
                 long?[,] matrix = new long?[,] {
                     { null, 2, 3, 5 },
                     { 2, 4, 6, 10 },
