@@ -8,6 +8,23 @@ namespace Primes
     {
         const long limitMax = (int.MaxValue - 1);
 
+
+        /// <summary>
+        /// Find the Nth Prime numbers
+        /// </summary>
+        /// <param name="numberOfPrime">Number of primes</param>
+        /// <returns>The Nth prime numbers</returns>
+        public IEnumerable<long> FindPrimes(long numberOfPrime)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// Find Prime number below the <paramref name="limit"/>
+        /// </summary>
+        /// <param name="limit">Limit</param>
+        /// <returns>The prime numbers below the limit</returns>
         public IEnumerable<long> FindPrimesLimit(int limit)
         {
             if (limit > limitMax)

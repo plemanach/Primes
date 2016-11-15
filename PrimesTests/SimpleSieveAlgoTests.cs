@@ -29,10 +29,18 @@ namespace Primes.Tests
         public void FindPrimesLimitHandleMaxNumberWellTest()
         {
             var primesAlgo = new SimpleSieveAlgo();
-            var primesResult = primesAlgo.FindPrimesLimit(int.MaxValue-1).Last();
+            var primesResult = primesAlgo.FindPrimesLimit(int.MaxValue - 1).Last();
             var primeExpected = 2147483629;
             Assert.AreEqual(primeExpected, primesResult);
         }
 
+        [TestMethod()]
+        public void FindPrimesTest()
+        {
+            var primesAlgo = new SimpleSieveAlgo();
+            var expectedPrimes = new long[] { 2, 3, 5, 7 };
+            var primesResult = primesAlgo.FindPrimesLimit(4).ToArray();
+            CollectionAssert.AreEqual(expectedPrimes, primesResult);
+        }
     }
 }
