@@ -57,7 +57,17 @@ namespace Primes.Tests
         [TestMethod()]
         public void GetPrimesMultiplicationTableTest()
         {
-            Assert.Fail();
+            long?[,] expectedPrimesTable = new long?[,] {
+                { null, 2, 3, 5 },
+                { 2, 4, 6, 10 },
+                { 3, 6, 9, 15 },
+                { 5, 10, 15, 25 }
+            };
+
+            var primesAlgo = new SegmentedSieveAlgo();
+            var primesTableResult = primesAlgo.GetPrimesMultiplicationTable(3);
+
+            CollectionAssert.AreEqual(expectedPrimesTable, primesTableResult);
         }
     }
 }
