@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BaseSieveAlgo.cs" />
     <Compile Include="IPrimeAlgo.cs" />
+    <Compile Include="MatrixFormater.cs" />
     <Compile Include="SegmentedSieveAlgo.cs" />
     <Compile Include="SimpleSieveAlgo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
