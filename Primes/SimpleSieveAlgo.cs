@@ -6,8 +6,15 @@ namespace Primes
 {
     public class SimpleSieveAlgo
     {
+        const long limitMax = (int.MaxValue - 1);
+
         public IEnumerable<long> FindPrimesLimit(int limit)
         {
+            if (limit > limitMax)
+            {
+                throw new ArgumentException(nameof(limit) + " has overflow its limit:" + limitMax);
+            }
+
             BitArray primes = new BitArray(limit + 1, true);
 
             Sieve(primes, 2, limit);
