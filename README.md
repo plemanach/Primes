@@ -6,8 +6,8 @@ For example :
 
 PrimesTools.exe 3
 
-|   |   |   |   |   |
-|---|---|---|---|---|
+   |   |   |   |
+---|---|---|---|
     |   2|   3|   5
    2|   4|   6|  10
    3|   6|   9|  15
@@ -24,5 +24,6 @@ of lazy algo to calulate the matrix on the go.
 The generation of prime numbers could be improved to use a factorization wheel, or explore more complexe algo:
 
 https://en.wikipedia.org/wiki/Wheel_factorization
+
 https://en.wikipedia.org/wiki/Sieve_of_Atkin
 
