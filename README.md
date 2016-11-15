@@ -2,9 +2,11 @@
 
 PrimesTools allow to print the multiplication table of the Nth prime numbers.
 
-For example :
+## To Use
 
+```bash
 PrimesTools.exe 3
+```
 
    |   |   |   |
 ---|---|---|---|
@@ -14,9 +16,11 @@ PrimesTools.exe 3
    5|  10|  15|  25
    
 
-
+**GOOD**
 
 The Algo generating the Nth prime numbers use a small amount of memory and is pretty performant.
+
+**TODO**
 
 The matrix generation itself is not that performant as it is storing the all matrix in memory and will deserve some kind
 of lazy algo to calulate the matrix on the go.
