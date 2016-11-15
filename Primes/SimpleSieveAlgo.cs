@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Primes
 {
     public class SimpleSieveAlgo
     {
-        const long limitMax = (int.MaxValue - 1);
+        const int limitMax = (int.MaxValue - 1);
 
 
         /// <summary>
@@ -16,9 +17,8 @@ namespace Primes
         /// <returns>The Nth prime numbers</returns>
         public IEnumerable<long> FindPrimes(long numberOfPrime)
         {
-            throw new NotImplementedException();
+            return FindPrimesLimit(limitMax).Take((int)numberOfPrime);
         }
-
 
         /// <summary>
         /// Find Prime number below the <paramref name="limit"/>
