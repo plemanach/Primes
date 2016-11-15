@@ -47,6 +47,11 @@ namespace Primes
             }
         }
 
+        public long?[,] GetPrimesMultiplicationTable(long numberOfPrime)
+        {
+            throw new NotImplementedException();
+        }
+
         protected void Sieve(BitArray primes, int start, int limit)
         {
             for (long i = start; i * i <= limit; i++)

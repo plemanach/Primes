@@ -70,5 +70,11 @@ namespace Primes.Tests
             var primeResult = primesAlgo.FindPrimes(1000000000).Last();
             Assert.AreEqual(expectedPrime, primeResult);
         }
+
+        [TestMethod()]
+        public void GetPrimesMultiplicationTableTest()
+        {
+            Assert.Fail();
+        }
     }
 }

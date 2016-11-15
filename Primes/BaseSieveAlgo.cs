@@ -36,5 +36,10 @@ namespace Primes
 
             return (long)p;
         }
+
+        public long?[,] GetPrimesMultiplicationTable(long numberOfPrime)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

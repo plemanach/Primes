@@ -19,6 +19,11 @@ namespace Primes
             return FindPrimesLimit(limit, limitMax);
         }
 
+        public long?[,] GetPrimesMultiplicationTable(long numberOfPrime)
+        {
+            throw new NotImplementedException();
+        }
+
         private IEnumerable<long> FindPrimesLimit(long limit, long numberOfPrime = limitMax)
         {
             long sqrt = (long)Math.Sqrt(limit);
