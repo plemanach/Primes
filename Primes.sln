@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primes", "Primes\Primes.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimesTests", "PrimesTests\PrimesTests.csproj", "{9DFAB972-BB28-41E5-9141-B71E364435F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimesTools", "PrimesTools\PrimesTools.csproj", "{58C3E3D0-10BD-44B3-87F8-A953B812306B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimesToolsTests", "PrimesToolsTests\PrimesToolsTests.csproj", "{6DDD6DD5-0BFC-4847-AB8D-8FA595771B87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9DFAB972-BB28-41E5-9141-B71E364435F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DFAB972-BB28-41E5-9141-B71E364435F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DFAB972-BB28-41E5-9141-B71E364435F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C3E3D0-10BD-44B3-87F8-A953B812306B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C3E3D0-10BD-44B3-87F8-A953B812306B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C3E3D0-10BD-44B3-87F8-A953B812306B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C3E3D0-10BD-44B3-87F8-A953B812306B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDD6DD5-0BFC-4847-AB8D-8FA595771B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDD6DD5-0BFC-4847-AB8D-8FA595771B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDD6DD5-0BFC-4847-AB8D-8FA595771B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDD6DD5-0BFC-4847-AB8D-8FA595771B87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
