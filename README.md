@@ -12,12 +12,13 @@ PrimesTools.exe 3
    2|   4|   6|  10
    3|   6|   9|  15
    5|  10|  15|  25
+   
 
 
 
 The Algo generating the Nth prime numbers use a small amount of memory and is pretty performant.
 
-The matrix generation itself is not that perforamt as it is storing the all matrix in memory and will deserve some kind
+The matrix generation itself is not that performant as it is storing the all matrix in memory and will deserve some kind
 of lazy algo to calulate the matrix on the go.
 
 
